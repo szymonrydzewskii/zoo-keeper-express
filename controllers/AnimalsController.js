@@ -8,7 +8,22 @@ const AnimalsController = {
         }catch (err){
             console.error(err)
         }
-    }
+    },
+
+    async pobierzAnimalPoId(req, res) {
+        const id = parseInt(req.params.id);
+        try {
+            const animal = await AnimalsService.pobierzAnimalPoId(id);
+            if (animal) {
+                res.json(animal);
+            } else {
+                console.log('Zwierze nie znalezione');
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    },
+
 }
 
 export default AnimalsController;

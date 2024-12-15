@@ -7,7 +7,11 @@ const AnimalsService = {
     async wszystkieAnimals() {
         const data = await fsPromises.readFile(filePath, 'utf-8');
         return JSON.parse(data)
-    }
+    },
+    async pobierzAnimalPoId(id) {
+        const animals = await this.wszystkieAnimals();
+        return animals.find(animal => animal.id === id);
+    },
 }
 
 export default AnimalsService;
