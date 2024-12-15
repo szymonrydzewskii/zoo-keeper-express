@@ -6,9 +6,11 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.get("/animals", AnimalsController.wszystkieAnimals)
-app.get('/animals/:id', AnimalsController.pobierzAnimalPoId)
-// app.get('/animals/endangered', AnimalsController.zagrozoneAnimals)
+app.get('/animals/endangered', AnimalsController.zagrozoneAnimals)
+app.get('/animals/id/:id', AnimalsController.pobierzAnimalPoId)
+app.get('/animals/habitat/:habitat', AnimalsController.pobierzAnimalPoHabitat)
 
+// app.post('/animals', AnimalsController.addAnimal);
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 })

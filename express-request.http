@@ -1,8 +1,12 @@
 ### GET /animals
 GET http://localhost:3000/animals
 
-### GET /animals/:id
-GET http://localhost:3000/animals/1
+### GET /animals/id/:id
+GET http://localhost:3000/animals/id/1
 
 ### GET /animals/endangered
 GET http://localhost:3000/animals/endangered
+
+### GET /animals/habitat/:habitat
+GET http://localhost:3000/animals/habitat/jungle
+

@@ -24,15 +24,23 @@ const AnimalsController = {
         }
     },
 
-    // async zagrozoneAnimals(req, res) {
-    //     try {
-    //         const zagrozoneAnimals = await AnimalsService.zagrozoneAnimals();
-    //         res.json(zagrozoneAnimals);
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-    // },
-
+    async zagrozoneAnimals(req, res) {
+        try {
+            const zagrozoneAnimals = await AnimalsService.zagrozoneAnimals();
+            res.json(zagrozoneAnimals);
+        } catch (err) {
+            console.error(err);
+        }
+    },
+    async pobierzAnimalPoHabitat(req, res) {
+        const habitat = req.params.habitat;
+        try {
+            const animals = await AnimalsService.pobierzAnimalPoHabitat(habitat);
+            res.json(animals);
+        } catch (err) {
+            console.error(err);
+        }
+    }
 }
 
 export default AnimalsController;

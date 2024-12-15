@@ -1,7 +1,7 @@
 import fsPromises from "fs/promises";
 import path from "path";
 
-const filePath = path.resolve('data', 'zoo.json');
+const filePath = path.resolve('./data', 'zoo.json');
 
 const AnimalsService = {
     async wszystkieAnimals() {
@@ -13,12 +13,15 @@ const AnimalsService = {
         return animals.find(animal => animal.id === id);
     },
 
-    // async zagrozoneAnimals() {
-    //     const animals = await this.wszystkieAnimals();
-    //     return animals.filter(animal => animal.isEndangered);
-    // }
+    async zagrozoneAnimals() {
+        const animals = await this.wszystkieAnimals();
+        return animals.filter(animal => animal.isEndangered);
+    },
 
-
+    async pobierzAnimalPoHabitat(habitat) {
+        const animals = await this.wszystkieAnimals();
+        return animals.filter(animal => animal.habitat.toLowerCase() === habitat.toLowerCase());
+    }
 }
 
 export default AnimalsService;
