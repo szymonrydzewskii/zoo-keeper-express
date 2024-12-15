@@ -1,0 +1,4 @@
+### GET /animals
+GET http://localhost:3000/animals
+
+###
