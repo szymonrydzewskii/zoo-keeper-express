@@ -1,0 +1,11 @@
+import fsPromises from "fs/promises";
+import path from "path";
+
+const filePath = path.resolve('data', 'zoo.json');
+
+const AnimalsService = {
+    async wszystkieAnimals() {
+        const data = await fsPromises.readFile(filePath, 'utf-8');
+        return JSON.parse(data)
+    }
+}
