@@ -8,14 +8,6 @@
     "habitat": "Savanna"
   },
   {
-    "id": 2,
-    "name": "Zara",
-    "species": "Tiger",
-    "age": 3,
-    "isEndangered": true,
-    "habitat": "Jungle"
-  },
-  {
     "id": 3,
     "name": "Dory",
     "species": "Fish",

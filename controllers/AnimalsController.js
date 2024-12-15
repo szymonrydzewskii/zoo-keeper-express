@@ -40,6 +40,26 @@ const AnimalsController = {
         } catch (err) {
             console.error(err);
         }
+    },
+
+    async addAnimal(req, res) {
+        const newAnimal = req.body;
+        try {
+            const addedAnimal = await AnimalsService.addAnimal(newAnimal);
+            res.status(201).json(addedAnimal);
+        } catch (err) {
+            console.error(err);
+        }
+    },
+
+    async deleteAnimal(req, res) {
+        const id = parseInt(req.params.id);
+        try {
+            const result = await AnimalsService.deleteAnimal(id);
+            res.json(result);
+        } catch (err) {
+            console.error(err);
+        }
     }
 }
 

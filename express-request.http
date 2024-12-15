@@ -8,5 +8,20 @@ GET http://localhost:3000/animals/id/1
 GET http://localhost:3000/animals/endangered
 
 ### GET /animals/habitat/:habitat
-GET http://localhost:3000/animals/habitat/jungle
+GET http://localhost:3000/animals/habitat/ocean
+
+### POST /animals
+POST http://localhost:3000/animals/add
+Content-Type: application/json; charset=utf-8
+
+{
+  "name": "Fafik",
+  "species": "Dog",
+  "age": 4,
+  "isEndangered": false,
+  "habitat": "Home"
+}
+
+### DELETE /animals/delete/:id
+DELETE http://localhost:3000/animals/delete/2
 
