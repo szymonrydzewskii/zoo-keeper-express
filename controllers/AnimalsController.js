@@ -24,6 +24,15 @@ const AnimalsController = {
         }
     },
 
+    // async zagrozoneAnimals(req, res) {
+    //     try {
+    //         const zagrozoneAnimals = await AnimalsService.zagrozoneAnimals();
+    //         res.json(zagrozoneAnimals);
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // },
+
 }
 
 export default AnimalsController;

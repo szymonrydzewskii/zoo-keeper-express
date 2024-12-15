@@ -12,6 +12,13 @@ const AnimalsService = {
         const animals = await this.wszystkieAnimals();
         return animals.find(animal => animal.id === id);
     },
+
+    // async zagrozoneAnimals() {
+    //     const animals = await this.wszystkieAnimals();
+    //     return animals.filter(animal => animal.isEndangered);
+    // }
+
+
 }
 
 export default AnimalsService;
