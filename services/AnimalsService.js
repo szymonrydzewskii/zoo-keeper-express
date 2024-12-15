@@ -9,3 +9,5 @@ const AnimalsService = {
         return JSON.parse(data)
     }
 }
+
+export default AnimalsService;
